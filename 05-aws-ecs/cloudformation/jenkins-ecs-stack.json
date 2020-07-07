@@ -21,16 +21,16 @@
       "Type": "String",
       "MinLength": "9",
       "MaxLength": "18",
-      "Default": "10.0.0.0/16",
+      "Default": "10.1.0.0/16",
       "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
       "ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
     },
     "InstanceType": {
       "Description": "EC2 instance type",
       "Type": "String",
-      "Default": "t2.micro",
+      "Default": "t3.large",
       "AllowedValues": [
-        "t2.micro",
+        "t3.large",
         "t2.small",
         "t2.medium"
       ],
@@ -39,7 +39,7 @@
     "DockerImage": {
       "Description": "The docker image to use for Jenkins",
       "Type": "String",
-      "Default": "ticketfly/jenkins-example-aws-ecs"
+      "Default": "hnarakis/jenkins-ecs-cluster"
     }
   },
   "Mappings": {
